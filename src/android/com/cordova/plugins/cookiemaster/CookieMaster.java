@@ -64,13 +64,13 @@ public class CookieMaster extends CordovaPlugin {
             final String url = args.getString(0);
             final String cookieName = args.getString(1);
             final String cookieValue = args.getString(2);
-
+ 	    final String cookieOptions = args.getString(3);
             cordova.getThreadPool().execute(new Runnable() {
                 public void run() {
                     try {
                         HttpCookie cookie = new HttpCookie(cookieName, cookieValue);
 
-                        String cookieString = cookie.toString().replace("\"", "");
+                        String cookieString = cookie.toString().replace("\"", "") + cookieOptions;
                         CookieManager cookieManager = CookieManager.getInstance();
                         cookieManager.setCookie(url, cookieString);
                         cookieManager.flush(); // Sync the cookie to persistent storage.
