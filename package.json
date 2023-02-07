@@ -32,10 +32,10 @@
     "cordova-android"
   ],
   "license": "MIT",
-  "name": "cordova-plugin-cartegraph-cookie-master",
+  "name": "cordova-cookie-master-samesite",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Cartegraph/cordova-cookie-master.git"
   },
-  "version": "1.4.1"
+  "version": "1.4.2"
 }
