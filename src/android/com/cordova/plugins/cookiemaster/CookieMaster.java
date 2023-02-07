@@ -65,10 +65,11 @@ public class CookieMaster extends CordovaPlugin {
             final String cookieName = args.getString(1);
             final String cookieValue = args.getString(2);
  	    final String cookieOptions = args.getString(3);
+	    final String cookieFull = cookieOptions+cookieValue;
             cordova.getThreadPool().execute(new Runnable() {
                 public void run() {
                     try {
-                        HttpCookie cookie = new HttpCookie(cookieName, cookieOptions+''+cookieValue);
+                        HttpCookie cookie = new HttpCookie(cookieName, cookieFull);
 
                         String cookieString = cookie.toString().replace("\"", "");
                         CookieManager cookieManager = CookieManager.getInstance();
