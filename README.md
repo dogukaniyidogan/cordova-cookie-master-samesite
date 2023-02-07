@@ -32,7 +32,7 @@ cookieMaster.setCookieValue('http://<some host>:<some port>', '<cookie name>', '
     },
     function(error) {
         console.log('Error setting cookie: '+error);
-    });
+    },'httponly;SameSite=None;Secure;');
 ```
 The cookie value should be formatted just like a regular <code>document.cookie</code> value.
 
