@@ -70,7 +70,7 @@ public class CookieMaster extends CordovaPlugin {
                     try {
                         HttpCookie cookie = new HttpCookie(cookieName, cookieValue);
 
-                        String cookieString = cookie.toString().replace("\"", "") + cookieOptions;
+                        String cookieString = cookie.toString().replace("\"", "");
                         CookieManager cookieManager = CookieManager.getInstance();
                         cookieManager.setCookie(url, cookieString);
                         cookieManager.flush(); // Sync the cookie to persistent storage.
