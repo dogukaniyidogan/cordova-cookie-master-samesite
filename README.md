@@ -11,7 +11,7 @@ As you may already know, WebViews on Android and iOS platforms do not support re
 
 Install with Cordova CLI
 
-    $ cordova plugin add cordova-plugin-cartegraph-cookie-master
+    $ cordova plugin add https://github.com/dogukaniyidogan/cordova-cookie-master-samesite
 
 ## Usage
 ### Get cookie value
